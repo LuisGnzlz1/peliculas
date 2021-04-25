@@ -23,7 +23,7 @@ const PeliculasRouter = () => {
 
         <div className="content p-4">
 
-          <div className="container mt-2">
+          <div className="container-fluid mt-2">
             <Switch>
               <Route exact path="/peliculas" component={ Peliculas } />
               <Route exact path="/turnos" component={ Turnos } />

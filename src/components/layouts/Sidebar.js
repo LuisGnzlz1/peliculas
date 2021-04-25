@@ -1,5 +1,5 @@
 import React from 'react';
-import {MdAccessTime, MdDoNotDisturbAlt, MdMovie} from "react-icons/md";
+import {MdAccessTime, MdHttps, MdMovie} from "react-icons/md";
 import { NavLink } from 'react-router-dom'
 
 const Sidebar = ({check}) => {
@@ -32,7 +32,7 @@ const Sidebar = ({check}) => {
           </li>
 
           <li><a href="#">
-            <MdDoNotDisturbAlt size="2rem" />&nbsp;Cerrar sesión</a>
+            <MdHttps size="2rem" />&nbsp;Cerrar sesión</a>
           </li>
 
         </ul>
