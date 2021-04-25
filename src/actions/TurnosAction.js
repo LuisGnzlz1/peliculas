@@ -1,15 +1,21 @@
 import {types} from "../types/types";
 
-export const login = (data) => ({
-    type: types.auth.login,
+export const actionTurnoAdd = (data) => ({
+    type: types.turnos.addTurno,
     payload: data
 });
 
-export const auth = (data) => ({
-    type: types.auth.auth,
+export const actionTurnoEdit = (data) => ({
+    type: types.turnos.editTurno,
     payload: data
 });
 
-export const logout = () => ({
-    type: types.auth.logout
+export const actionTurnoDelete = (data) => ({
+    type: types.turnos.deleteTurno,
+    payload: data
+});
+
+export const actionTurnoEstado = (data) => ({
+    type: types.turnos.estado,
+    payload: data
 });

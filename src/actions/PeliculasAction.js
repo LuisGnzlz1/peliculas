@@ -15,3 +15,8 @@ export const actionDelete = (data) => ({
     payload: data
 });
 
+export const actionTurnos = (data) => ({
+    type: types.peliculas.turno,
+    payload: data
+});
+

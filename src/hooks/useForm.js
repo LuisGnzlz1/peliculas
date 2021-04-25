@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import dateFnsFormat from 'date-fns/format';
 
-export const useFormPeliculas = ( initialState = {} ) => {
+export const useForm = (initialState = {} ) => {
     
     const [values, setValues] = useState(initialState);
 
@@ -28,11 +28,16 @@ export const useFormPeliculas = ( initialState = {} ) => {
 
         }else if(tipo === 'fecha' || tipo === 'hora') {
 
-            console.log(dateFnsFormat(valor, 'yyyy-MM-dd').toString());
+            setValues({
+                ...values,
+                [ campo ]: dateFnsFormat(valor,  ( tipo === 'fecha' ? 'yyyy-MM-dd' : 'HH:mm' ) ).toString()
+            });
+
+        }else if(tipo === 'check') {
 
             setValues({
                 ...values,
-                [ campo ]: dateFnsFormat(valor,  ( tipo === 'fecha' ? 'yyyy-MM-dd' : '' )).toString()
+                [ campo ]: valor.target.checked === true ? '1' : '2'
             });
 
         }else{

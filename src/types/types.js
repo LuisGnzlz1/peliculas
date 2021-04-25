@@ -8,9 +8,10 @@ export const types = {
     },
 
     turnos: {
-        add:  'Add',
-        edit: 'Edit',
-        delete: 'Delete'
+        addTurno:  'AddTurno',
+        editTurno: 'EditTurno',
+        deleteTurno: 'DeleteTurno',
+        estado: 'Estado'
     }
 
 };

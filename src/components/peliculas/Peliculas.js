@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PeliculasList from "./PeliculasList";
 import {useSelector} from "react-redux";
 import PeliculasModal from "./PeliculasModal";
-import {useFormPeliculas} from "../../hooks/useFormPeliculas";
+import {useForm} from "../../hooks/useForm";
 
 const Peliculas = () => {
 
@@ -14,7 +14,7 @@ const Peliculas = () => {
         turnos: []
     }
 
-    const [values, setValue, setFields] = useFormPeliculas(initPelicula);
+    const [values, setValue, setFields] = useForm(initPelicula);
 
     const { peliculas } = useSelector( state => state );
 
