@@ -8,7 +8,7 @@ const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOO
 
 const reducers = combineReducers({
     peliculas: peliculasReducer,
-    terminos: turnosReducer
+    turnos: turnosReducer
 });
 
 
@@ -16,5 +16,5 @@ export const store = createStore(
     reducers,
     composeEnhancers(
         applyMiddleware( thunk )
-    )
+    ),
 );

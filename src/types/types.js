@@ -1,13 +1,16 @@
 export const types = {
 
     peliculas: {
-        login:  'Login',
-        logout: 'Logout',
-        auth: 'Auth'
+        add:  'Add',
+        edit: 'Edit',
+        delete: 'Delete',
+        turno: 'Turno'
     },
 
     turnos: {
-
+        add:  'Add',
+        edit: 'Edit',
+        delete: 'Delete'
     }
 
 };

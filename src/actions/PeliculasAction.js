@@ -1,15 +1,17 @@
 import {types} from "../types/types";
 
-export const login = (data) => ({
-    type: types.auth.login,
+export const actionAdd = (data) => ({
+    type: types.peliculas.add,
     payload: data
 });
 
-export const auth = (data) => ({
-    type: types.auth.auth,
+export const actionEdit = (data) => ({
+    type: types.peliculas.edit,
     payload: data
 });
 
-export const logout = () => ({
-    type: types.auth.logout
+export const actionDelete = (data) => ({
+    type: types.peliculas.delete,
+    payload: data
 });
+
