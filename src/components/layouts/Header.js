@@ -8,15 +8,15 @@ const Header = ({actionChecked}) => {
 
       <nav className="navbar navbar-expand navbar-dark bg-dark">
 
-        <a className="sidebar-toggle mr-3" href="#"><MdMenu size="2rem" onClick={ () => actionChecked() }/></a>
-        <a className="navbar-brand" href="https://bootadmin.net">&nbsp;Movie Dashboard</a>
+        <span className="sidebar-toggle mr-3"><MdMenu size="2rem" onClick={ () => actionChecked() }/></span>
+        <span className="navbar-brand">&nbsp;Movie Dashboard</span>
 
         <div className="navbar-collapse collapse d-flex justify-content-end">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item dropdown">
-              <a href="" className="nav-link dropdown-toggle" data-toggle="dropdown">
+              <span className="nav-link dropdown-toggle" data-toggle="dropdown">
                 <img src="https://i.pravatar.cc/150?img=8" width="40" height="40" className="rounded-circle" alt="avatar"/>
-                  &nbsp;&nbsp;Luis Gonzalez</a>
+                  &nbsp;&nbsp;Luis Gonzalez</span>
             </li>
           </ul>
         </div>

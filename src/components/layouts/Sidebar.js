@@ -31,7 +31,7 @@ const Sidebar = ({check}) => {
             </NavLink>
           </li>
 
-          <li><a href="#">
+          <li><a href="##">
             <MdHttps size="2rem" />&nbsp;Cerrar sesión</a>
           </li>
 
