@@ -3,9 +3,6 @@ import { MdModeEdit, MdDeleteForever, MdHttps } from "react-icons/md";
 import {useDispatch} from "react-redux";
 import Swal from "sweetalert2";
 import {actionTurnoDelete, actionTurnoEstado} from "../../actions/TurnosAction";
-import dateFnsFormat from 'date-fns/format';
-import dateFnsParse from 'date-fns/parse';
-
 const TurnosItem = ({index, data, modoEdit}) => {
 
     const dispatch = useDispatch();
@@ -47,8 +44,6 @@ const TurnosItem = ({index, data, modoEdit}) => {
         });
 
     }
-
-    //let fechaParse = dateFnsParse(data.turno, "HH:mm", new Date());
 
     return (
 

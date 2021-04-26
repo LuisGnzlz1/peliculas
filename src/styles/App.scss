@@ -89,7 +89,9 @@ body {
 .react-datepicker-wrapper {
   width: inherit !important;
 }
-
+.pull-right{
+  float: right!important;
+}
 
 @media (max-width: 768px) {
   .sidebar {

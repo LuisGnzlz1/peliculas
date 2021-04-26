@@ -11,12 +11,11 @@ const PeliculasItem = ({index, data, openModal}) => {
     const dispatch = useDispatch();
 
     const handleEdit = (datos) => {
-        openModal('edit', datos);
+        openModal('form', 'edit', datos);
     }
 
-    const handleTurno = (id) => {
-
-
+    const handleTurno = (datos) => {
+        openModal('turno', '', datos);
     }
 
     const handleDelete = (id) => {
@@ -55,7 +54,7 @@ const PeliculasItem = ({index, data, openModal}) => {
         </td>
         <td>
           <MdModeEdit size="2rem" style={{cursor: "pointer", marginRight: "0.8rem"}} onClick={ () => handleEdit(data) }/>
-          <MdSchedule size="2rem" style={{cursor: "pointer", marginRight: "0.8rem"}} onClick={() => handleTurno(data.id) }/>&nbsp;&nbsp;
+          <MdSchedule size="2rem" style={{cursor: "pointer", marginRight: "0.8rem"}} onClick={() => handleTurno(data) }/>&nbsp;&nbsp;
           <MdDeleteForever size="2rem" style={{cursor: "pointer", marginRight: "0.8rem"}} onClick={ () => handleDelete(data.id) }/>
 
         </td>

@@ -4,7 +4,8 @@ export const types = {
         add:  'Add',
         edit: 'Edit',
         delete: 'Delete',
-        turno: 'Turno'
+        addHorario: 'AddHorario',
+        deleteHorario: 'DeleteHorario'
     },
 
     turnos: {

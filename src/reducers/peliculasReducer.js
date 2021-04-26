@@ -7,7 +7,18 @@ let initialState = [
         nombre: 'The Matrix',
         fechapublicacion: '2021-05-05',
         estado: "1",
-        turnos: []
+        turnos: [
+            {
+                id: uuidv4(),
+                turno: '13:00',
+                estado: "1",
+            },
+            {
+                id: uuidv4(),
+                turno: '14:00',
+                estado: "1",
+            }
+        ]
     }
 ];
 
@@ -56,8 +67,38 @@ export const peliculasReducer = ( state = initialState, action ) => {
             localStorage.setItem('peliculas',JSON.stringify(statesCopyDelete));
             return statesCopyDelete;
 
-        case types.peliculas.turno:
-            return { }
+        case types.peliculas.addHorario:
+
+            let stateHorario = state.map((peli) => {
+
+                const {id, valor} = action.payload;
+
+                if(peli.id === id){
+                    peli.turnos = [...peli.turnos, valor];
+                }
+
+                return peli;
+
+            });
+
+            localStorage.setItem('peliculas',JSON.stringify(stateHorario));
+            return stateHorario;
+
+        case types.peliculas.deleteHorario:
+
+            let copyDeleteHorario = state.map((peli) => {
+
+                const {id, valor} = action.payload;
+
+                if(peli.id === id){
+                    peli.turnos = peli.turnos.filter(item => item.id !== valor)
+                }
+
+                return peli;
+            });
+
+            localStorage.setItem('peliculas',JSON.stringify(copyDeleteHorario));
+            return copyDeleteHorario;
     
         default:
             return state;

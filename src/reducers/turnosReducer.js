@@ -4,9 +4,25 @@ import { v4 as uuidv4 } from 'uuid';
 let initialStateTurno = [
     {
         id: uuidv4(),
-        turno: '13:05',
+        turno: '13:00',
         estado: "1",
-    }
+    },
+    {
+        id: uuidv4(),
+        turno: '14:00',
+        estado: "1",
+    },
+    {
+        id: uuidv4(),
+        turno: '15:00',
+        estado: "1",
+    },
+    {
+        id: uuidv4(),
+        turno: '16:00',
+        estado: "1",
+    },
+
 ];
 
 if( localStorage.getItem("turnos") === null){

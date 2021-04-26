@@ -15,8 +15,13 @@ export const actionDelete = (data) => ({
     payload: data
 });
 
-export const actionTurnos = (data) => ({
-    type: types.peliculas.turno,
+export const actionAddHorario = (data) => ({
+    type: types.peliculas.addHorario,
+    payload: data
+});
+
+export const actionDeleteHorario = (data) => ({
+    type: types.peliculas.deleteHorario,
     payload: data
 });
 

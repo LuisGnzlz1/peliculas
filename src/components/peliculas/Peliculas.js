@@ -3,6 +3,7 @@ import PeliculasList from "./PeliculasList";
 import {useSelector} from "react-redux";
 import PeliculasModal from "./PeliculasModal";
 import {useForm} from "../../hooks/useForm";
+import PeliculasModalTurno from "./PeliculasModalTurno";
 
 const Peliculas = () => {
 
@@ -19,30 +20,48 @@ const Peliculas = () => {
     const { peliculas } = useSelector( state => state );
 
     const [showModal, setShowModal] = useState(false);
+    const [showModalTurno, setShowModalTurno] = useState(false);
 
     const handleChange = (e, tipoCampo = '', nombreCampo = '') => {
         setValue(e, tipoCampo, nombreCampo);
     }
 
-    const openModal = (tipoAction = 'add', data) => {
+    const openModal = (tipoModal = 'form', tipoAction = 'add', data) => {
 
-        if(tipoAction === 'add'){
-            setFields(initPelicula);
-        }else{
+        if(tipoModal === 'form'){
+
+            if(tipoAction === 'add'){
+                setFields(initPelicula);
+            }else{
+                setFields(data);
+            }
+
+            setShowModal(true);
+
+        }else if(tipoModal === 'turno'){
+
+            setShowModalTurno(true);
             setFields(data);
         }
 
-        setShowModal(true);
+
     }
 
-    const closeModal = () => {
-        setShowModal(false);
+    const closeModal = (tipoModal = 'form') => {
+
+        if(tipoModal === 'form'){
+            setShowModal(false);
+
+        }else if(tipoModal === 'turno'){
+            setShowModalTurno(false);
+        }
     }
 
   return (
     <>
 
         <PeliculasModal show={showModal} close={closeModal} data={values} handleChange={handleChange}/>
+        <PeliculasModalTurno show={showModalTurno} close={closeModal} data={values} handleChange={handleChange}/>
 
         <div className="row mb-4">
 
